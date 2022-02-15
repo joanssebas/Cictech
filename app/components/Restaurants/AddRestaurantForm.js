@@ -137,7 +137,7 @@ export default function AddRestaurantForm(props) {
         imagesSelected={imagesSelected}
       />
       <Button
-        title="Crear restaurante"
+        title="Crear producto"
         onPress={addRestaurant}
         buttonStyle={styles.btnAddRestaurant}
       />
@@ -182,7 +182,7 @@ function FormAdd(props) {
   return (
     <View style={styles.viewForm}>
       <Input
-        placeholder="Nombre del restaurante"
+        placeholder="Nombre del producto"
         containerStyle={styles.input}
         onChange={(e) => setRestaurantName(e.nativeEvent.text)}
       />
@@ -198,7 +198,7 @@ function FormAdd(props) {
         }}
       />
       <Input
-        placeholder="Descripcion del restaurante"
+        placeholder="Descripcion del producto"
         multiline={true}
         inputContainerStyle={styles.textArea}
         onChange={(e) => setRestaurantDescription(e.nativeEvent.text)}
@@ -297,10 +297,10 @@ function UploadImage(props) {
     } else {
       const result = await ImagePicker.launchImageLibraryAsync({
         allowsEditing: true,
-        aspect: [4, 3],
+        aspect: [1, 1],
       });
 
-      console.log(result);
+      //console.log(result);
       if (result.cancelled) {
         toastRef.current.show(
           "Has cerrado la galeria sin seleccionar ninguna imagen",

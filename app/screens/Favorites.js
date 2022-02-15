@@ -238,7 +238,7 @@ function Restaurant(props) {
         />
 
         <View style={styles.info}>
-          <Text style={styles.name}> {name} </Text>
+          <Text style={styles.name}>{name}</Text>
           <Icon
             type="material-community"
             name="heart"
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 20,
   },
   favorites: {
     marginTop: -35,

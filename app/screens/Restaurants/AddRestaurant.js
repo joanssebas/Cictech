@@ -18,7 +18,7 @@ export default function AddRestaurant(props) {
         setIsLoading={setIsLoading}
       />
       <Toast ref={toastRef} position="center" opacity={0.9} />
-      <Loading isVisible={isLoading} text="Creando restaurante" />
+      <Loading isVisible={isLoading} text="Creando producto" />
     </View>
   );
 }

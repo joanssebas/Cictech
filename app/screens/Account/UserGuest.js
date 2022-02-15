@@ -14,10 +14,9 @@ export default function UserGuest() {
         style={styles.image}
       />
 
-      <Text style={styles.title}>Consulta tu perfil de 5 tenedores</Text>
+      <Text style={styles.title}>Consulta tu perfil Cictech</Text>
       <Text style={styles.description}>
-        Recuerda que entre mas compres puedes acumular puntos y recibir envios
-        gratis a todo el pais :D
+        Te aseguramos los mejores precios y la mejor calidad :D
       </Text>
 
       <View style={styles.viewBtn}>

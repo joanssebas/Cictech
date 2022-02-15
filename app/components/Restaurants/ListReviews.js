@@ -15,10 +15,10 @@ export default function ListReviews(props) {
   const {navigation, idRestaurant} = props;
   const [userLogged, setUserLogged] = useState(false);
   const [reviews, setReviews] = useState([]);
-  console.log(reviews);
+  //console.log(reviews);
 
   firebase.auth().onAuthStateChanged((user) => {
-    console.log(userLogged);
+    // console.log(userLogged);
     user ? setUserLogged(true) : setUserLogged(false);
   });
 

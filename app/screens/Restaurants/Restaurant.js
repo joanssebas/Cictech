@@ -99,7 +99,7 @@ export default function Restaurant(props) {
           toastRef.current.show("Se ha añadido el producto a favoritos :D");
         })
         .catch(() => {
-          toastRef.current.show("Error al añadir el restaurante a favoritos");
+          toastRef.current.show("Error al añadir el producto a favoritos");
         });
     }
   };
@@ -152,7 +152,7 @@ export default function Restaurant(props) {
 
       <Carousel
         arrayImages={restaurant.images}
-        height={250}
+        height={400}
         width={screenWitdh}
       />
 
@@ -179,7 +179,7 @@ function TitleRestaurant(props) {
 
   return (
     <View style={styles.viewRestaurantTitle}>
-      <View style={{flexDirection: "row"}}>
+      <View>
         <Text style={styles.nameRestaurant}>{name}</Text>
         <Rating
           style={styles.rating}
@@ -204,8 +204,14 @@ function RestaurantInfo(props) {
       action: null,
     },
     {
-      text: "111 222 333",
-      iconName: "phone",
+      text: "315 750 3298 (Tuluá)",
+      iconName: "whatsapp",
+      iconType: "material-community",
+      action: null,
+    },
+    {
+      text: "319 339 3192 (Armenia)",
+      iconName: "whatsapp",
       iconType: "material-community",
       action: null,
     },
@@ -250,10 +256,12 @@ const styles = StyleSheet.create({
   descriptionRestaurant: {
     marginTop: 5,
     color: "grey",
+    top: 30,
   },
   rating: {
     position: "absolute",
     right: 0,
+    top: 30,
   },
   viewRestaurantInfo: {
     margin: 15,

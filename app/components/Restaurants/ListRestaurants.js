@@ -16,7 +16,7 @@ export default function ListRestaurants(props) {
   const {restaurants, handleLoadMore, isLoading} = props;
 
   const navigation = useNavigation();
-  console.log(restaurants);
+  //console.log(restaurants);
   //const restaurants = [];
   return (
     <View>
@@ -96,7 +96,7 @@ function FooterList(props) {
   } else {
     return (
       <View style={styles.notFoundRestaurants}>
-        <Text>No quedan restaurantes por mostrar</Text>
+        <Text>No quedan productos por mostrar</Text>
       </View>
     );
   }
@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
   },
   restaurantName: {
     fontWeight: "bold",
+    width: 300,
   },
   restaurantAddress: {
     paddingTop: 2,

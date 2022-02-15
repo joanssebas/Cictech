@@ -30,7 +30,8 @@ export default function Restaurants(props) {
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((userInfo) => {
-      //  console.log(userInfo);
+      //console.log("USEEEEEEEER INFO!!!!!!");
+      //console.log(userInfo);
       setUser(userInfo);
     });
   }, []);
@@ -97,6 +98,29 @@ export default function Restaurants(props) {
       });
   };
 
+  const userAdmin = firebase.auth().currentUser;
+
+  var userTrue = null;
+
+  if (userAdmin != null) {
+    if (userAdmin.email === "admin@gmail.com") {
+      userTrue = true;
+    } else {
+      userTrue = false;
+    }
+  }
+  //console.log("EMAIL USER");
+
+  //console.log(userAdmin.email);
+
+  //const emailUser = userAdmin.email;
+
+  //console.log(emailUser);
+
+  //const usertrue = "admin@gmail.com" === emailUser;
+
+  //console.log(usertrue);
+
   return (
     <View style={styles.viewBody}>
       <ListRestaurants
@@ -104,7 +128,8 @@ export default function Restaurants(props) {
         handleLoadMore={handleLoadMore}
         isLoading={isLoading}
       />
-      {user && (
+
+      {userTrue ? (
         <Icon
           type="material-community"
           name="plus"
@@ -113,7 +138,7 @@ export default function Restaurants(props) {
           containerStyle={styles.btnContainer}
           onPress={() => navigation.navigate("add-restaurant")}
         />
-      )}
+      ) : null}
     </View>
   );
 }

@@ -57,8 +57,14 @@ function Restaurant(props) {
         />
         <View style={styles.titleRating}>
           <Text style={styles.title}>{name}</Text>
-          <Rating imageSize={20} startingValue={rating} readonly />
         </View>
+        <Rating
+          imageSize={20}
+          startingValue={rating}
+          readonly
+          style={styles.rating}
+        />
+
         <Text style={styles.description}> {description} </Text>
       </Card>
     </TouchableOpacity>
@@ -81,9 +87,7 @@ const styles = StyleSheet.create({
     height: 200,
   },
   titleRating: {
-    flexDirection: "row",
     marginTop: 10,
-    justifyContent: "space-between",
   },
   title: {
     fontSize: 20,
@@ -93,5 +97,8 @@ const styles = StyleSheet.create({
     color: "grey",
     marginTop: 0,
     textAlign: "justify",
+  },
+  rating: {
+    alignItems: "flex-end",
   },
 });

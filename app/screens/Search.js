@@ -15,7 +15,7 @@ export default function Search(props) {
 
   const [restaurants, setRestaurants] = useState([]);
 
-  console.log(restaurants);
+  //console.log(restaurants);
 
   useEffect(() => {
     if (search) {

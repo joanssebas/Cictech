@@ -11,7 +11,7 @@ export default function Login() {
   return (
     <ScrollView>
       <Image
-        source={require("../../../assets/img/5-tenedores-letras-icono-logo.png")}
+        source={require("../../../assets/img/logo-login.png")}
         resizeMode="contain"
         style={styles.logo}
       />
